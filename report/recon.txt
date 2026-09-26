@@ -1,0 +1,11 @@
+========================================
+        RECONNAISSANCE
+========================================
+Target: 192.168.58.132
+Scan Date: Sat Sep 26 03:50:51 PM EDT 2026
+
+--- Hostname / IP Information ---
+
+--- Basic Network Information ---
+192.168.58.132 dev eth0 src 192.168.58.131 uid 1000 
+    cache 

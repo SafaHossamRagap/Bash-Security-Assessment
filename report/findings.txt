@@ -1,0 +1,31 @@
+=== FINDINGS REPORT ===
+Target: 192.168.58.132
+Date: Sat Sep 26 03:54:03 PM EDT 2026
+===================================
+
+[!] SSH service version check
+Evidence: 22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+Risk: Outdated SSH versions may contain vulnerabilities.
+Recommendation: Keep SSH updated and enforce secure configurations.
+---------------------------------------------------
+[!] SMB shares accessible without authentication
+Evidence: smbclient returned a share list using null session (-N).
+Risk: Sensitive shares might be exposed to unauthorized users.
+Recommendation: Require authentication and restrict share permissions.
+---------------------------------------------------
+[!] SMTP service detected
+Evidence: Port 25 is open running mail service.
+Risk: Potential open relay or user enumeration risks.
+Recommendation: Configure relay restrictions and disable VRFY if unneeded.
+---------------------------------------------------
+[!] HTTP headers and information exposure
+Evidence:
+HTTP/1.1 200 OK
+Date: Sat, 26 Sep 2026 19:51:21 GMT
+Server: Apache/2.2.8 (Ubuntu) DAV/2
+X-Powered-By: PHP/5.2.4-2ubuntu5.10
+Content-Type: text/html
+
+Risk: Server version disclosure helps attackers target specific exploits.
+Recommendation: Hide server version banners in configuration.
+---------------------------------------------------
